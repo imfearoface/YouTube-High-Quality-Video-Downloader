@@ -7,7 +7,7 @@ import subprocess
 import re
 
 # Insert Video URL
-video_url = "https://www.youtube.com/watch?v=0QyqFBaINn4"
+video_url = "Video URL"
 
 # Variables
 yt = YouTube(video_url)
