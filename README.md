@@ -1,94 +1,90 @@
-🎬 YouTube Video Downloader & Merger (Python + FFmpeg)
+# YouTube Video Downloader & Merger
 
-This project downloads the highest-quality video and audio streams from a YouTube video and merges them into a single MP4 file using FFmpeg.
+A Python application that downloads the highest-quality video and audio streams from YouTube and merges them into a single MP4 file using FFmpeg.
 
-It uses the pytubefix library to access adaptive streams and automatically generates safe filenames based on the video title.
+---
 
-🚀 Features
+## Features
 
-Downloads highest available video quality
+- High-resolution video download
+- High-bitrate audio download
+- Automatic stream merging with FFmpeg
+- Safe filename generation
+- Temporary file cleanup
+- GUI with live progress bars
 
-Downloads highest available audio quality
+---
 
-Merges video and audio into one MP4 file
+## Requirements
 
-Cleans video titles for valid filenames
+- Python 3.8+
+- FFmpeg
+- pytubefix
 
-Automatically deletes temporary files
+---
 
-Simple GUI with progress bars
-
-📦 Requirements
-
-Python 3.8 or higher
-
-FFmpeg
-
-pytubefix
-
-📥 Installation
+## Installation
 
 Install pytubefix:
 
 pip install pytubefix
 
-
 Download FFmpeg:
 https://ffmpeg.org/download.html
 
-⚙️ Setup
+---
 
-Edit the script and update:
+## Setup
 
-🎥 Video URL (if using CLI mode)
-video_url = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+Open the script and update the FFmpeg path.
 
-🧰 FFmpeg Path (Windows example)
+Example (Windows):
+
 ffmpeg_path = r"Z:\your_path\ffmpeg.exe"
 
-▶️ Usage
+---
 
-Run the script:
+## Usage
+
+Run the application:
 
 python YoutubeDownloader.py
 
+Saved output example:
 
-Example output:
-
-Saved file:
 C:\Videos\My Video Title.mp4
 
-🧠 How It Works
+---
 
-Retrieves highest-resolution video stream
+## How It Works
 
-Retrieves highest-bitrate audio stream
+1. Selects highest-resolution video stream
+2. Selects highest-bitrate audio stream
+3. Downloads streams separately
+4. Merges using FFmpeg
+5. Deletes temporary files
+6. Saves final MP4
 
-Downloads streams separately
+---
 
-Merges with FFmpeg
+## Why Video and Audio Are Separate
 
-Deletes temporary files
+YouTube uses adaptive streaming (DASH) where video and audio are stored independently.
+Combining them produces significantly higher quality than a single stream download.
 
-Saves final MP4
+---
 
-📌 Why Separate Video & Audio?
+## Planned Improvements
 
-YouTube delivers high-quality content using adaptive streaming (DASH), where video and audio are stored separately. Merging them produces significantly better quality.
+- Playlist downloads
+- Resolution selector
+- Merge progress tracking
+- Pause and cancel support
+- Executable build
 
-🚧 Future Improvements
+---
 
-Playlist downloading
-
-Resolution selector
-
-Merge progress bar
-
-Cancel / pause support
-
-Export as .exe
-
-⚠️ Disclaimer
+## Disclaimer
 
 This project is for educational purposes only.
-Always respect YouTube’s Terms of Service and copyright laws.
+Respect YouTube’s Terms of Service and copyright laws.
